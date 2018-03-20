@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+<ion-grid>
+    <ion-row>
+      <ion-col  *ngFor="let filme of lista_filmes" class="gallery-item">
+      
+          <div><img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path"></div>
+          <button ion-button block (click)="abrirDetalhes(filme)">Detalhes</button>
+      </ion-col>
+      
+    </ion-row>
+   
+
+
+
+
+
+
+     
+    </ion-grid>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>
