@@ -13,9 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
-
-    <ion-card *ngIf="filme">
+<ion-content padding *ngIf="filme"  [style.background-image]="'url(https://image.tmdb.org/t/p/w500/' + filme.poster_path +')'">
 
         <ion-item>
          
@@ -31,6 +29,6 @@
     
        
     
-      </ion-card>
+
 
 </ion-content>

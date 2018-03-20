@@ -444,9 +444,10 @@
     },
     "theme": "vs-dark vscode-theme-defaults-themes-dark_plus-json",
     "themeBackground": "#1e1e1e",
-    "pickerWorkingDir": "/Users/cabukater/Documents/projeto_angular_2/movies",
+    "pickerWorkingDir": "/Volumes/projeto pos/superagendador/app-client",
     "openedPathsList": {
         "workspaces": [
+            "/Volumes/projeto pos/superagendador/app-client/Rosy_platinum",
             "/Users/cabukater/Documents/projeto_angular_2/movies/filmes",
             "/Users/cabukater/Documents"
         ],

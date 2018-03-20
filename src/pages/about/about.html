@@ -1,23 +1,16 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
+<ion-content>
 
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
 
 <ion-grid>
-    <ion-row>
-      <ion-col  *ngFor="let filme of lista_filmes" class="gallery-item">
+    <ion-row class="flex-container">
+      <ion-col (click)="abrirDetalhes(filme)" *ngFor="let filme of lista_filmes" class="gallery-item flex-item" [style.background-image]="'url(https://image.tmdb.org/t/p/w400/' + filme.poster_path +')'">
       
-          <div><img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path"></div>
-          <button ion-button block (click)="abrirDetalhes(filme)">Detalhes</button>
+          
+          
       </ion-col>
       
     </ion-row>
