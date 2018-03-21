@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 import { MovieProvider } from '../providers/movie/movie';
 import { DetalhePage } from '../pages/detalhe/detalhe';
+import { DetalheseriesPage } from '../pages/detalheseries/detalheseries';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DetalhePage } from '../pages/detalhe/detalhe';
     ContactPage,
     HomePage,
     TabsPage,
-    DetalhePage
+    DetalhePage,
+    DetalheseriesPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { DetalhePage } from '../pages/detalhe/detalhe';
     ContactPage,
     HomePage,
     TabsPage,
-    DetalhePage
+    DetalhePage,
+    DetalheseriesPage,
   ],
   providers: [
     StatusBar,

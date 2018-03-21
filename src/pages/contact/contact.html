@@ -1,17 +1,16 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+<ion-grid>
+    <ion-row class="flex-container">
+      <ion-col (click)="abrirDetalheSerie(serie)" *ngFor="let serie of lista_series" class="gallery-item flex-item" [style.background-image]="'url(https://image.tmdb.org/t/p/w400/' + serie.poster_path +')'">
+      
+          
+          
+      </ion-col>
+      
+    </ion-row>

@@ -14,3 +14,140 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.tabbar{
+   background-color:#b9041b !important;
+   color:#fff;
+}
+
+.tab-button ion-icon,
+.tab-button{
+    color:#fff !important;
+}
+
+
+.details-container {
+    background-position: center bottom;
+     background-repeat:  no-repeat;
+     background-size: cover;
+}
+
+.details-item{
+background-color: rgba(31, 30, 30, 0.88);
+height: 100%;
+}
+
+.details-item p,  h2{
+   color: #fff;
+
+}
+.banner{
+  width:100%
+}
+.banner img{
+width:100%
+
+
+}
+
+.banner-movie{
+   height: 30%;
+   overflow: hidden
+}
+.banner-movie img{
+ 
+  margin: 0 auto;
+  width: 100%;;
+}
+.banner-movie .col{
+  padding:0 !important;
+  
+}
+small.original-title{
+font-size: 11px;
+margin-top: 9px;
+color: #a59a9a;
+font-weight: 400;
+}
+.title{
+   color:#fff;
+   font-size:22px;
+}
+
+.gallery-item{
+   height: 100%;
+   background-size: 100%;
+   margin: 1px;
+   min-height: 20%;
+}
+
+p.title-similar {
+   font-size: 12px;
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   text-align: center;
+   padding:0 3px;
+}
+
+p.description {
+   text-align: justify;
+ 
+}
+
+small{
+   color: #fff;
+   font-size: 13px;
+   font-weight: 600;
+   text-align: right;
+   float: right;
+}
+
+.popular{
+   height: 56px;
+width: 100%;
+background-color:rgba(147, 141, 138, 0.1411764705882353);
+border-top: 1px dotted #fff;
+
+}
+.popular h2{
+   line-height: 54px;
+}
+
+.popular p{
+   float: right;
+}
+ion-row.title-rel.row h4 {
+   color: #fff;
+   font-size: 14px !important;
+   font-weight: 600;
+   padding-top: 22px;
+}
+
+.gallery-item{
+    height: 170px;
+    margin: 2px 2px;
+    background-position: center top;
+    background-size: 170px;
+   }
+   .gallery-item img{
+       width: 100%;
+       
+       
+   }
+
+   .flex-container {
+    display: flex;
+    justify-content: center; }
+  
+  .flex-item {
+    width: 100px;
+    -webkit-flex-basis: 100px; /* Safari 6.1+ */
+    flex-basis: 100px;
+  }
+
+
+  ion-content.content.content-ios.has-infinite-scroll.has-refresher{
+      background-color:#2e2d2d;
+  }

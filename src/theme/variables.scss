@@ -86,3 +86,220 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+
+
+$layout-module-size: 30px;
+$directions: top, right, bottom, left;
+
+/*Lib geral*/
+%center{ text-align:center;	}
+%u-bold{ font-weight:600;}
+
+/*margens*/
+%u-no-margin { margin: 0;}
+%u-no-padding {padding:0;}
+@each $direction in $directions{
+    %u-no-padding-#{direction} {padding-#{$direction}:0;}
+    %u-no-margin-#{direction} {margin-#{$direction}:0;}
+
+
+}
+
+// ==========================================================================
+// pos absolute
+// ==========================================================================
+%u-top-reset{top:0;}
+%u-right-reset{right:0;}
+%u-bottom-reset{bottom:0;}
+%u-left-reset{left:0;}
+// ==========================================================================
+// borders
+// ==========================================================================
+
+%u-no-border{border:none;}
+%u-no-outline{outline:none;}
+
+// ==========================================================================
+//Margin
+// ==========================================================================
+%u-margin-top-reset{margin-top:0;}
+%u-margin-right-reset{margin-right:0;}
+%u-margin-bottom-reset{margin-bottom:0;}
+%u-margin-left-reset{margin-left:0;}
+// ==========================================================================
+// Text/Font
+// ==========================================================================
+
+%u-bold { font-weight: bold; }
+%u-no-bold { font-weight: normal; }
+%u-italic { font-style: italic; }
+%u-no-italic { font-style: normal; }
+
+%u-text-align-left { text-align: left; }
+%u-text-align-center { text-align: center; }
+%u-text-align-right { text-align: right; }
+%u-text-align-justify { text-align: justify; }
+
+%u-underline { text-decoration: underline; }
+%u-strike { text-decoration: line-through; }
+%u-no-text-decoration { text-decoration: none; }
+
+%u-uppercase { text-transform: uppercase; }
+%u-capitalize { text-transform: capitalize; }
+%u-no-text-transform { text-transform: none; }
+
+
+
+// ==========================================================================
+// Fontes
+// ==========================================================================
+
+
+$bars-title:16px;
+
+
+
+%u-font-family-1{ font-family: 'Hind Siliguri', sans-serif; }
+%u-font-family-2{ font-family: 'Roboto', sans-serif;}
+
+%u-text-geral{font-size:14px;}
+%u-titulos-geral{font-size:18px;}
+%u-titulos-geral{font-size:16px;}
+// ==========================================================================
+// geral
+// ==========================================================================
+
+%u-overflow-hidden{overflow: hidden}
+
+// ==========================================================================
+// Position
+// ==========================================================================
+
+%u-position-absolute { position: absolute; }
+%u-position-relative { position: relative; }
+%u-position-fixed { position: fixed; }
+%u-position-static { position: static; }
+
+// ==========================================================================
+// FLOAT
+// ==========================================================================
+
+%u-float-left {float: left; }
+%u-float-right { float: right; }
+
+// ==========================================================================
+// Flexbox
+// ==========================================================================
+%u-display-flex { display: flex; }
+%u-display-block { display: block; }
+%u-display-inline-block { display: inline-block; }
+%u-display-none { display: none; }
+%u-flex-direction-row { flex-direction: row; }
+%u-flex-direction-column { flex-direction: column; }
+%u-flex-wrap-wrap { flex-wrap: wrap; }
+%u-flex-wrap-wrap-reverse { flex-wrap: wrap-reverse; }
+%u-flex-wrap-nowrap { flex-wrap: nowrap; }
+%u-flex-align-items-center { align-items: center; }
+%u-flex-align-items-flex-start { align-items: flex-start; }
+%u-flex-align-items-flex-end { align-items: flex-end; }
+%u-flex-align-items-stretch { align-items: stretch; }
+%u-flex-align-items-baseline { align-items: baseline; }
+%u-flex-justify-content-center { justify-content: center; }
+%u-flex-justify-content-flex-start { justify-content: flex-start; }
+%u-flex-justify-content-flex-end { justify-content: flex-end; }
+%u-flex-justify-content-space-around { justify-content: space-around; }
+%u-flex-justify-content-space-between { justify-content: space-between; }
+%u-flex-total-centered { @extend %u-flex-align-items-center, %u-flex-justify-content-center; }
+
+
+// ==========================================================================
+// z-index refs //por refe
+// ==========================================================================
+%u-z-index-low { z-index: -999; }
+%u-z-index-normal { z-index: 1; }
+%u-z-index-medium { z-index: 100; }
+%u-z-index-maximum { z-index: 999; }
+
+// ==========================================================================
+// BORDERS
+// ==========================================================================
+%u-no-border{
+    border:none;
+
+}
+
+
+%u-border-dotted{
+    border-style:dotted;
+
+}
+
+%u-border-solid{
+    border-style:solic;
+
+}
+
+@for $i from 1 through 5 {
+    .border-#{$i}{ 
+        border-width: 1px * $i; 
+    }
+    .border-top-#{$i}{ 
+        border-top: 1px * $i; 
+    }
+    .border-left-#{$i}{ 
+        border-left: 1px * $i; 
+    }
+    .border-bottom-#{$i}{ 
+        border-bottom: 1px * $i; 
+    }
+    .border-right-#{$i}{ 
+        border-right: 1px * $i; 
+    }
+
+}
+
+
+
+// ==========================================================================
+// PADDINGS E MARGENS
+// ==========================================================================
+
+
+//COMO ACREDITO QuE OS PADDING NÃO IRÃO ULTRAPASSAR 30PX DIVIDI POR 5.
+
+@for $i from 1 through 5 {
+   
+    .padding-#{$i} { 
+        padding: 10px * $i; 
+       }
+       .padding-left-#{$i} { 
+        padding-left: 10px * $i; 
+       }
+       .padding-right-#{$i} { 
+        padding-right: 10px * $i; 
+       }
+       .padding-top-#{$i}{ 
+        padding-top: 10px * $i; 
+       }
+       .padding-bottom-#{$i} { 
+        padding-bottom: 10px * $i; 
+       }
+//margin
+       .margin-#{$i} { 
+        margin: 10px * $i; 
+       }
+       .margin-left-#{$i} { 
+        margin-left: 10px * $i; 
+       }
+       .margin-right-#{$i} { 
+        margin-right: 10px * $i; 
+       }
+       .margin-top-#{$i} { 
+        margin-top: 10px * $i; 
+       }
+       .margin-bottom-#{$i} { 
+        margin-bottom: 10px* $i; 
+       }
+}

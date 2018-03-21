@@ -12,6 +12,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MovieProvider {
 
+  getLatestMovies: any;
+
   private baseApiPath  = this.api();
   private apiKey = this.keyApi()
 
@@ -28,9 +30,11 @@ export class MovieProvider {
     return "https://api.themoviedb.org/3/";
   }
 
-  getLatestMovies(){
-    return this.http.get(this.baseApiPath + "movie/latest?" + this.apiKey)
+  getLatestrMovies(page = 1){
+    return this.http.get(this.baseApiPath + "movie/latest?" + this.apiKey + `&language=pt-BR&page=${page}`)
   }
+
+
 
   getPopularMovies(page = 1){
     return this.http.get(this.baseApiPath + "movie/popular?" + this.apiKey + `&language=pt-BR&page=${page}`)
@@ -38,7 +42,20 @@ export class MovieProvider {
 
 
   getMovieDetails(filmeid){
-    return this.http.get(this.baseApiPath + `movie/${filmeid}?` + this.apiKey)
+    return this.http.get(this.baseApiPath + `movie/${filmeid}?` + this.apiKey+'&language=pt-BR')
+    
+
   }
 
+  getSimilarMovies(filmeid){
+    return this.http.get(this.baseApiPath + `movie/${filmeid}/similar?` + this.apiKey+ '&page=1')
+  }
+
+  getPopularSeries(page = 1){
+    return this.http.get(this.baseApiPath + "tv/popular?" + this.apiKey + `&language=pt-BR&page=${page}`)
+  }
+
+  getSerieDetails(serieid){
+    return this.http.get(this.baseApiPath + `tv/${serieid}?` + this.apiKey+'&language=pt-BR')
+  }
 }

@@ -448,9 +448,25 @@
     "openedPathsList": {
         "workspaces": [
             "/Volumes/projeto pos/superagendador/app-client/Rosy_platinum",
+            "/Volumes/projeto pos/superagendador/app-client/Rosy_platinum",
             "/Users/cabukater/Documents/projeto_angular_2/movies/filmes",
             "/Users/cabukater/Documents"
         ],
         "files": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderPath": "/Volumes/projeto pos/superagendador/app-client/Rosy_platinum",
+            "backupPath": "/Users/cabukater/Documents/projeto_angular_2/movies/filmes/vscode-root/Backups/016407f77d92d2e01fdd5f3a44f33c66",
+            "uiState": {
+                "mode": 3,
+                "display": 188857906,
+                "width": 1024,
+                "height": 745,
+                "x": -1195,
+                "y": 55
+            }
+        }
     }
 }

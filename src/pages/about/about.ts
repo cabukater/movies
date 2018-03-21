@@ -22,11 +22,6 @@ export class AboutPage {
   public isRefresing: boolean = false;
   public infiniteScroll;
 
-
-
-
-
-
   constructor(
     public navCtrl: NavController,
     private movieProvider: MovieProvider,

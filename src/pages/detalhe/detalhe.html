@@ -4,29 +4,75 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>detalhe</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding *ngIf="filme"  [style.background-image]="'url(https://image.tmdb.org/t/p/w500/' + filme.poster_path +')'">
+<ion-content  *ngIf="filme" class="details-container"  [style.background-image]="'url(https://image.tmdb.org/t/p/w500/' + filme.poster_path +')'">
 
-        <ion-item>
-         
-          <h2>{{ filme.original_title }}</h2>
-          <p>{{ filme.release_date}}</p>
-        </ion-item>
+  <ion-row class="banner-movie">
+      <ion-col  >
+        <img [src]="'https://image.tmdb.org/t/p/w400/' + filme.backdrop_path">
+      </ion-col>
+      </ion-row>
+  <ion-grid class="details-item" padding>
+ 
+
+
+     
+        
+
+          <ion-row>
+            <ion-col>
+                <h2 class="title"> {{filme.title}} <small class="original-title">{{filme.original_title}}</small></h2>
+             <p class="description"> {{filme.overview}}</p>
+             <small>Lançamento: {{ filme.release_date | date: 'dd/MM/yyyy'}}</small>
+            </ion-col>
+            </ion-row>
+
+          
+              <ion-row  class="popular">
+                <ion-col>
+                   <h2> <ion-icon name="star"></ion-icon> {{ filme.vote_average }}</h2>
+                  </ion-col>
+                  <ion-col>
+
+                <p> <ion-icon name="people"></ion-icon> {{ filme.vote_count }} - votos</p>
+              </ion-col>
+              </ion-row>
+
+ <ion-row class="title-rel">
+<ion-col>
+
+    <h4>Filmes Relacionados:</h4>
+
+  </ion-col>
+</ion-row>
+    <ion-row>
+        <ion-col>
+        
+<ion-slides slidesPerView="4">
+  
+
+
+    <ion-slide  (click)="abrirDetalhes(filme)" *ngFor="let filme of lista_filmes  | slice:0:8" class="gallery-item flex-item">
+     
+        
+      <img [src]="'https://image.tmdb.org/t/p/w400/' + filme.poster_path">
+    </ion-slide>
+  
     
-        <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
+  
+  </ion-slides>
+  </ion-col>
+</ion-row>       
+
+
+                
+      </ion-grid>
+        
     
-        <ion-card-content>
-          {{filme.overview}}
-        </ion-card-content>
+        
     
+
        
     
 

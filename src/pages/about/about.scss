@@ -1,29 +1,4 @@
 page-about {
-   .gallery-item{
-    height: 170px;
-    margin: 2px 2px;
-    background-position: center top;
-    background-size: 170px;
-   }
-   .gallery-item img{
-       width: 100%;
-       
-       
-   }
-
-   .flex-container {
-    display: flex;
-    justify-content: center; }
-  
-  .flex-item {
-    width: 100px;
-    -webkit-flex-basis: 100px; /* Safari 6.1+ */
-    flex-basis: 100px;
-  }
-
-
-  ion-content.content.content-ios.has-infinite-scroll.has-refresher{
-      background-color:#2e2d2d;
-  }
+   
   
 }
